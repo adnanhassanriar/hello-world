@@ -1,0 +1,13 @@
+name: Run Helll World container
+
+on: push
+
+jobs:
+  run-docker-container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Run Hello World
+        run: docker run hello-world
